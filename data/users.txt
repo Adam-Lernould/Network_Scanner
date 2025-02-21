@@ -1,0 +1,179 @@
+# ----------------------------
+# Systèmes d'exploitation
+# ----------------------------
+root
+admin
+administrator
+user
+test
+guest
+ubuntu
+debian
+centos
+fedora
+pi
+kali
+operator
+backup
+sysadmin
+su
+sudo
+www-data
+nobody
+daemon
+bin
+sys
+sync
+
+# Windows
+administrateur  # FR
+administrador   # ES
+admina          # DE
+amministratore  # IT
+winadmin
+domainadmin
+helpdesk
+sqlservice
+iis_user
+exchange
+
+# ----------------------------
+# Bases de données
+# ----------------------------
+mysql
+postgres
+oracle
+mongodb
+sqlserver
+db2
+redis
+cassandra
+influxdb
+elastic
+mariadb
+sqlite
+couchdb
+neo4j
+rdbadmin
+
+# ----------------------------
+# Réseaux & IoT
+# ----------------------------
+cisco
+ubnt
+hp
+juniper
+aruba
+fortinet
+paloalto
+dlink
+netgear
+zyxel
+raspberry
+arduino
+printer
+caméra
+hikvision
+dahua
+axis
+
+# ----------------------------
+# Services Cloud/DevOps
+# ----------------------------
+aws
+ec2-user
+azureuser
+gcp
+docker
+kube
+jenkins
+ansible
+terraform
+vagrant
+gitlab
+github
+git
+nexus
+prometheus
+grafana
+vault
+nomad
+consul
+
+# ----------------------------
+# Applications Web
+# ----------------------------
+wordpress
+joomla
+drupal
+magento
+prestashop
+opencart
+adminer
+phpmyadmin
+roundcube
+osticket
+nextcloud
+owncloud
+redmine
+zabbix
+nagios
+zope
+plone
+
+# ----------------------------
+# Schémas de nommage courants
+# ----------------------------
+admin1
+admin2
+admin2023
+rootadmin
+superuser
+techuser
+support
+user01
+user02
+test01
+test02
+demo
+devuser
+deploy
+stage
+prod
+backupuser
+audit
+monitor
+
+# ----------------------------
+# Entreprises génériques
+# ----------------------------
+societe_admin
+entreprise_user
+corpadmin
+company
+staff
+employee
+contractor
+intern
+manager
+director
+ceo
+cto
+cio
+help
+info
+contact
+service
+
+# ----------------------------
+# Langues & Régional
+# ----------------------------
+usuario       # ES
+utilisateur   # FR
+benutzer      # DE
+utente        # IT 
+gebruiker     # NL
+用户           # CN
+ユーザー        # JP
+사용자          # KR
+пользователь  # RU

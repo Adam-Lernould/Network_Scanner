@@ -1,0 +1,12 @@
+# Nmap 7.95 scan initiated Fri Feb 21 21:30:16 2025 as: /usr/lib/nmap/nmap -sV -O -sC -Pn --script=dns-zone-transfer,dns-brute -oN reports/nmap_scan_report_20250221_213016.txt 2
+Nmap scan report for 2 (0.0.0.2)
+Host is up.
+All 1000 scanned ports on 2 (0.0.0.2) are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+Too many fingerprints match this host to give specific OS details
+
+Host script results:
+|_dns-brute: Can't guess domain of "2"; use dns-brute.domain script argument.
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 21 21:33:47 2025 -- 1 IP address (1 host up) scanned in 210.93 seconds
