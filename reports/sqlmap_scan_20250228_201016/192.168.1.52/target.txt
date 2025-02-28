@@ -1,1 +1,0 @@
-http://192.168.1.52:80 (GET)  # /usr/bin/sqlmap -u 192.168.1.52:80 --batch --risk=1 --level=1 --output-dir=reports/sqlmap_scan_20250228_201016
