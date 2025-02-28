@@ -1,0 +1,1 @@
+http://192.168.1.254/login:3000 (GET)  # /usr/bin/sqlmap -u 192.168.1.254/login:3000 --batch --risk=1 --level=1 --output-dir=reports/sqlmap_scan_20250228_200401

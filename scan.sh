@@ -16,64 +16,73 @@ EOF
 
 # Fonction pour afficher le menu principal
 show_menu() {
-    echo "Choisissez un outil de scan ou tapez 'exit' pour quitter :"
-    echo "1. Netdiscover (Découverte d'hôtes sur le réseau local)"
-    echo "2. Nmap (Scan de ports et détection de services)"
-    echo "3. Nikto (Scan de vulnérabilités web)"
-    echo "4. Gobuster (Énumération de répertoires web)"
-    echo "5. Hydra (Brute force sur les services réseau)"
-    echo "6. SQLmap (Détection d'injections SQL)"
+    echo "============================================================"
+    echo " Choisissez un outil de scan ou tapez 'exit' pour quitter :"
+    echo " 1. Netdiscover (Découverte d'hôtes sur le réseau local)"
+    echo " 2. Nmap (Scan de ports et détection de services)"
+    echo " 3. Nikto (Scan de vulnérabilités web)"
+    echo " 4. Gobuster (Énumération de répertoires web)"
+    echo " 5. Hydra (Brute force sur les services réseau)"
+    echo " 6. SQLmap (Détection d'injections SQL)"
+    echo " 7. WhatWeb (Détection des technologies web)"
+    echo "============================================================"
 }
 
 # Fonction pour afficher les options Nmap suggérées avec explications
 show_nmap_options() {
-    echo "Options Nmap suggérées :"
-    echo "1. -sV (Détection de version : Identifie les versions des services détectés)"
-    echo "2. -O (Détection du système d'exploitation : Devine l'OS de la cible)"
-    echo "3. -sS (Scan SYN : Scan furtif utilisant des paquets SYN)"
-    echo "4. -A (Scan agressif : Active la détection de version, l'OS, et les scripts NSE)"
-    echo "5. -Pn (Scan sans ping : Ignore la découverte d'hôte et scan directement les ports)"
-    echo "6. -p (Spécifier les ports : Scan des ports spécifiques, ex: 80,443 ou 1-1000)"
-    echo "7. -T4 (Vitesse du scan : Augmente la vitesse du scan, niveau 4 sur 5)"
-    echo "8. -sU (Scan UDP : Scan les ports UDP, utiles pour DNS, SNMP, etc.)"
-    echo "9. -sC (Exécuter les scripts par défaut : Active les scripts NSE par défaut)"
-    echo "10. -v (Mode verbeux : Affiche plus de détails pendant le scan)"
-    echo "11. -oA (Exporter les résultats : Exporte dans trois formats : normal, XML, et grepable)"
-    echo "12. --top-ports (Scanner les ports les plus courants : Ex: --top-ports 100)"
-    echo "13. Aucune"
+    echo "========================================================================================="
+    echo " Options Nmap suggérées :"
+    echo " 1. -sV (Détection de version : Identifie les versions des services détectés)"
+    echo " 2. -O (Détection du système d'exploitation : Devine l'OS de la cible)"
+    echo " 3. -sS (Scan SYN : Scan furtif utilisant des paquets SYN)"
+    echo " 4. -A (Scan agressif : Active la détection de version, l'OS, et les scripts NSE)"
+    echo " 5. -Pn (Scan sans ping : Ignore la découverte d'hôte et scan directement les ports)"
+    echo " 6. -p (Spécifier les ports : Scan des ports spécifiques, ex: 80,443 ou 1-1000)"
+    echo " 7. -T4 (Vitesse du scan : Augmente la vitesse du scan, niveau 4 sur 5)"
+    echo " 8. -sU (Scan UDP : Scan les ports UDP, utiles pour DNS, SNMP, etc.)"
+    echo " 9. -sC (Exécuter les scripts par défaut : Active les scripts NSE par défaut)"
+    echo " 10. -v (Mode verbeux : Affiche plus de détails pendant le scan)"
+    echo " 11. -oA (Exporter les résultats : Exporte dans trois formats : normal, XML, et grepable)"
+    echo " 12. --top-ports (Scanner les ports les plus courants : Ex: --top-ports 100)"
+    echo " 13. Aucune"
+    echo "========================================================================================="
 }
 
 # Fonction pour afficher les scripts NSE suggérés avec explications
 show_nmap_scripts() {
-    echo "Scripts NSE suggérés :"
-    echo "1. http-title (Récupère le titre des pages web)"
-    echo "2. ssl-enum-ciphers (Énumère les chiffrements SSL/TLS supportés)"
-    echo "3. dns-brute (Force brute sur les sous-domaines DNS)"
-    echo "4. vuln (Recherche des vulnérabilités connues)"
-    echo "5. smb-os-discovery (Détecte l'OS via SMB)"
-    echo "6. ftp-anon (Vérifie si le serveur FTP permet une connexion anonyme)"
-    echo "7. http-sql-injection (Détecte les vulnérabilités d'injection SQL)"
-    echo "8. http-enum (Énumère les répertoires et fichiers sur un serveur web)"
-    echo "9. ssh-auth-methods (Détecte les méthodes d'authentification SSH supportées)"
-    echo "10. smb-vuln-ms17-010 (Vérifie la vulnérabilité EternalBlue sur SMB)"
-    echo "11. http-shellshock (Détecte la vulnérabilité Shellshock sur les serveurs web)"
-    echo "12. dns-zone-transfer (Tente un transfert de zone DNS)"
-    echo "13. http-wordpress-enum (Énumère les plugins et thèmes WordPress)"
-    echo "14. http-cors (Vérifie les en-têtes CORS pour les vulnérabilités)"
-    echo "15. http-robots.txt (Récupère le fichier robots.txt d'un serveur web)"
-    echo "16. rdp-enum-encryption (Énumère les méthodes de chiffrement RDP)"
-    echo "17. snmp-info (Récupère des informations via SNMP)"
-    echo "18. Aucun"
+    echo "================================================================================"
+    echo " Scripts NSE suggérés :"
+    echo " 1. http-title (Récupère le titre des pages web)"
+    echo " 2. ssl-enum-ciphers (Énumère les chiffrements SSL/TLS supportés)"
+    echo " 3. dns-brute (Force brute sur les sous-domaines DNS)"
+    echo " 4. vuln (Recherche des vulnérabilités connues)"
+    echo " 5. smb-os-discovery (Détecte l'OS via SMB)"
+    echo " 6. ftp-anon (Vérifie si le serveur FTP permet une connexion anonyme)"
+    echo " 7. http-sql-injection (Détecte les vulnérabilités d'injection SQL)"
+    echo " 8. http-enum (Énumère les répertoires et fichiers sur un serveur web)"
+    echo " 9. ssh-auth-methods (Détecte les méthodes d'authentification SSH supportées)"
+    echo " 10. smb-vuln-ms17-010 (Vérifie la vulnérabilité EternalBlue sur SMB)"
+    echo " 11. http-shellshock (Détecte la vulnérabilité Shellshock sur les serveurs web)"
+    echo " 12. dns-zone-transfer (Tente un transfert de zone DNS)"
+    echo " 13. http-wordpress-enum (Énumère les plugins et thèmes WordPress)"
+    echo " 14. http-cors (Vérifie les en-têtes CORS pour les vulnérabilités)"
+    echo " 15. http-robots.txt (Récupère le fichier robots.txt d'un serveur web)"
+    echo " 16. rdp-enum-encryption (Énumère les méthodes de chiffrement RDP)"
+    echo " 17. snmp-info (Récupère des informations via SNMP)"
+    echo " 18. Aucun"
+    echo "================================================================================"
 }
 
 # Fonction pour afficher les options Netdiscover suggérées
 show_netdiscover_options() {
-    echo "Options Netdiscover suggérées :"
-    echo "1. -i (Interface réseau : Spécifie l'interface à utiliser)"
-    echo "2. -r (Plage d'adresses IP : Scan une plage d'adresses spécifique)"
-    echo "3. -l (Nom de fichier pour les résultats : Sauvegarde les résultats dans un fichier)"
-    echo "4. -F (Filtrer les résultats : Applique un filtre sur les résultats)"
-    echo "5. Aucune"
+    echo "======================================================================================"
+    echo " Options Netdiscover suggérées :"
+    echo " 1. -i (Interface réseau : Spécifie l'interface à utiliser)"
+    echo " 2. -r (Plage d'adresses IP : Scan une plage d'adresses spécifique)"
+    echo " 3. -l (Nom de fichier pour les résultats : Sauvegarde les résultats dans un fichier)"
+    echo " 4. -F (Filtrer les résultats : Applique un filtre sur les résultats)"
+    echo " 5. Aucune"
+    echo "======================================================================================"
 }
 
 # Fonction pour exécuter Netdiscover
@@ -93,7 +102,7 @@ run_netdiscover() {
         esac
     done
 
-    echo "Starting Netdiscover scan with options: $OPTIONS"
+    echo "Démarrage de Netdiscover avec options: $OPTIONS"
     netdiscover $OPTIONS
 }
 
@@ -156,129 +165,76 @@ run_nmap() {
     fi
 
     # Exécuter le script nmap_scan.sh
-    echo "Starting Nmap scan on $TARGET with options: $OPTIONS and scripts: $SCRIPTS"
+    echo "Démarrage de Nmap sur $TARGET avec options: $OPTIONS et scripts: $SCRIPTS"
     ./nmap_scan.sh "$TARGET" "$OPTIONS" "$SCRIPTS"
+}
+
+run_whatweb() {
+    read -p "Entrez la cible (ex: http://example.com): " TARGET
+    echo "Démarrage de WhatWeb sur $TARGET"
+    ./whatweb_scan.sh "$TARGET"
 }
 
 # Fonction pour exécuter Nikto
 run_nikto() {
     read -p "Entrez la cible (IP/URL): " TARGET
-    ./nikto_scan.sh "$TARGET"
+    read -p "Entrez le port (défaut: 80): " PORT
+    PORT=${PORT:-80}
+    echo "Démarrage du scan Nikto sur $TARGET:$PORT"
+    ./nikto_scan.sh "$TARGET" "$PORT"
 }
 
 # Fonction pour exécuter Gobuster
 run_gobuster() {
-    echo "Choisissez le type de cible :"
-    echo "1. Adresse IP"
-    echo "2. URL"
-    read -p "Entrez votre choix (1 ou 2): " TARGET_TYPE
-
-    if [ "$TARGET_TYPE" == "1" ]; then
-        read -p "Entrez l'adresse IP (ex: 192.168.1.27): " TARGET
-    elif [ "$TARGET_TYPE" == "2" ]; then
-        read -p "Entrez l'URL (ex: http://example.com): " TARGET
-    else
-        echo "Choix invalide. Utilisation de l'adresse IP par défaut."
-        read -p "Entrez l'adresse IP (ex: 192.168.1.27): " TARGET
-    fi
-
-    # Chemin par défaut
-    DEFAULT_WORDLIST="data/gobuster.txt"
-    
-    # Demander la wordlist
-    read -p "Entrez le chemin vers la wordlist [défaut: $DEFAULT_WORDLIST]: " WORDLIST
-    WORDLIST=${WORDLIST:-$DEFAULT_WORDLIST}
-
-    # Vérifier l'existence du fichier
+    read -p "Entrez la cible (IP/URL): " TARGET
+    read -p "Entrez le port (défaut: 80): " PORT
+    read -p "Entrez le fichier de wordlist (défaut: data/gobuster.txt): " WORDLIST
+    PORT=${PORT:-80}
+    WORDLIST=${WORDLIST:-"data/gobuster.txt"}
     if [ ! -f "$WORDLIST" ]; then
-        echo "Erreur : Fichier $WORDLIST introuvable!"
-        return
+        echo "Erreur : Le fichier de wordlist $WORDLIST n'existe pas."
+        exit 1
     fi
-
-    # Lancer le scan
-    echo -e "\n=== Lancement de Gobuster ==="
-    ./gobuster_scan.sh "$TARGET" "$WORDLIST"
+    echo "Démarrage du scan Gobuster sur $TARGET:$PORT avec wordlist $WORDLIST"
+    ./gobuster_scan.sh "$TARGET" "$WORDLIST" "$PORT"
 }
-
 
 # Fonction pour exécuter Hydra
 run_hydra() {
     read -p "Entrez la cible (IP/URL): " TARGET
-
-    # Demander le service à utiliser
-    echo "Choisissez le service :"
-    echo "1. http-get   - Attaque brute force sur les requêtes HTTP GET (par exemple, les pages web simples)."
-    echo "2. http-post  - Attaque brute force sur les requêtes HTTP POST (par exemple, les formulaires de connexion)."
-    echo "3. ftp        - Attaque brute force sur le service FTP (File Transfer Protocol)."
-    echo "4. ssh        - Attaque brute force sur le service SSH (Secure Shell)."
+    echo "=========================="
+    echo " Choisissez le service :"
+    echo " 1. http-get"
+    echo " 2. http-post-form"
+    echo " 3. ftp"
+    echo " 4. ssh"
+    echo "=========================="
     read -p "Entrez le numéro du service (1-4): " SERVICE_CHOICE
-
     case $SERVICE_CHOICE in
         1) SERVICE="http-get" ;;
-        2) SERVICE="http-post" ;;
+        2) SERVICE="http-post-form" 
+           read -p "Entrez le chemin du formulaire (ex: /login): " FORM_PATH
+           read -p "Entrez le message d'échec d'authentification (ex: Incorrect password): " FAILURE_MESSAGE
+           SERVICE="$FORM_PATH:username=^USER^&password=^PASS^:F=$FAILURE_MESSAGE"
+           ;;
         3) SERVICE="ftp" ;;
         4) SERVICE="ssh" ;;
         *) echo "Choix invalide. Utilisation de http-get par défaut."; SERVICE="http-get" ;;
     esac
-
-    # Demander le port (par défaut : 80 pour HTTP, 21 pour FTP, 22 pour SSH)
-    DEFAULT_PORT=80
-    if [ "$SERVICE" == "ftp" ]; then
-        DEFAULT_PORT=21
-    elif [ "$SERVICE" == "ssh" ]; then
-        DEFAULT_PORT=22
-    fi
-
-    read -p "Entrez le port (défaut: $DEFAULT_PORT): " PORT
-    if [ -z "$PORT" ]; then
-        PORT="$DEFAULT_PORT"
-    fi
-
-    # Définir le nombre de tâches parallèles (par défaut : 4)
-    DEFAULT_TASKS=4
-    read -p "Entrez le nombre de tâches parallèles (défaut: $DEFAULT_TASKS): " TASKS
-    if [ -z "$TASKS" ]; then
-        TASKS="$DEFAULT_TASKS"
-    fi
-
-    # Définir les fichiers par défaut (chemins relatifs)
-    DEFAULT_USERLIST="data/users.txt"
-    DEFAULT_PASSLIST="data/passwords.txt"
-
-    # Demander le chemin vers la liste d'utilisateurs
-    read -p "Entrez le chemin vers la liste d'utilisateurs (ex: data/users.txt) [défaut: $DEFAULT_USERLIST]: " USERLIST
-    if [ -z "$USERLIST" ]; then
-        USERLIST="$DEFAULT_USERLIST"
-    fi
-
-    # Demander le chemin vers la liste de mots de passe
-    read -p "Entrez le chemin vers la liste de mots de passe (ex: data/passwords.txt) [défaut: $DEFAULT_PASSLIST]: " PASSLIST
-    if [ -z "$PASSLIST" ]; then
-        PASSLIST="$DEFAULT_PASSLIST"
-    fi
-
-    # Vérifier si les fichiers existent
-    if [ ! -f "$USERLIST" ]; then
-        echo "Erreur : Le fichier d'utilisateurs $USERLIST n'existe pas."
-        return
-    fi
-
-    if [ ! -f "$PASSLIST" ]; then
-        echo "Erreur : Le fichier de mots de passe $PASSLIST n'existe pas."
-        return
-    fi
-
-    # Exécuter Hydra
-    echo "Starting Hydra brute force on $TARGET for service $SERVICE (port: $PORT, tâches: $TASKS)"
-    echo "Userlist: $USERLIST"
-    echo "Passlist: $PASSLIST"
-    ./hydra_scan.sh "$TARGET" "$SERVICE" "$PORT" "$TASKS" "$USERLIST" "$PASSLIST"
+    read -p "Entrez le port (défaut: dépend du service): " PORT
+    PORT=${PORT:-""}
+    USERLIST="data/users.txt"
+    PASSLIST="data/passwords.txt"
+    echo "Démarrage de l'attaque Hydra sur $TARGET:$PORT ($SERVICE) avec utilisateurs: $USERLIST et mots de passe: $PASSLIST"
+    ./hydra_scan.sh "$TARGET" "$SERVICE" "$USERLIST" "$PASSLIST"
 }
-
 # Fonction pour exécuter SQLmap
+# Fonction pour exécuter SQLmap avec choix du port
 run_sqlmap() {
     read -p "Entrez l'IP/URL de base (ex: http://192.168.1.27): " BASE_URL
+    read -p "Entrez le port (défaut: 80): " PORT
     read -p "Entrez le chemin et les paramètres (ex: /login?user=admin): " PATH_PARAMS
+    PORT=${PORT:-80}
 
     # Construire l'URL complète
     TARGET="${BASE_URL%/}${PATH_PARAMS}"
@@ -292,22 +248,36 @@ run_sqlmap() {
         fi
     fi
 
-    # Demander le niveau d'agressivité
-    read -p "Niveau de risque (1-3, défaut: 1): " RISK
-    read -p "Niveau de test (1-5, défaut: 1): " LEVEL
+    # Demander le niveau d'agressivité avec validation
+    while true; do
+        read -p "Niveau de risque (1-3, défaut: 1): " RISK
+        RISK=${RISK:-1}
+        if [[ "$RISK" =~ ^[1-3]$ ]]; then
+            break
+        else
+            echo "Erreur : Le niveau de risque doit être entre 1 et 3."
+        fi
+    done
 
-    # Définir les valeurs par défaut
-    RISK=${RISK:-1}
-    LEVEL=${LEVEL:-1}
+    while true; do
+        read -p "Niveau de test (1-5, défaut: 1): " LEVEL
+        LEVEL=${LEVEL:-1}
+        if [[ "$LEVEL" =~ ^[1-5]$ ]]; then
+            break
+        else
+            echo "Erreur : Le niveau de test doit être entre 1 et 5."
+        fi
+    done
 
     # Exécuter SQLmap
-    ./sqlmap_scan.sh "$TARGET" "$RISK" "$LEVEL"
+    echo "Démarrage de SQLmap sur $TARGET:$PORT avec risque $RISK et niveau $LEVEL"
+    ./sqlmap_scan.sh "$TARGET" "$PORT" "$RISK" "$LEVEL"
 }
 
 # Boucle principale
 while true; do
     show_menu
-    read -p "Choisissez une option (1-6) ou tapez 'exit' pour quitter: " CHOICE
+    read -p "Choisissez une option (1-7) ou tapez 'exit' pour quitter: " CHOICE
     case $CHOICE in
         1) run_netdiscover ;;
         2) run_nmap ;;
@@ -315,6 +285,7 @@ while true; do
         4) run_gobuster ;;
         5) run_hydra ;;
         6) run_sqlmap ;;
+        7) run_whatweb ;;
         exit) echo "Au revoir!"; break ;;
         *) echo "Option invalide. Veuillez réessayer." ;;
     esac

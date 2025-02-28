@@ -1,1 +1,0 @@
-# Hydra v9.5 run at 2025-02-21 22:08:41 on 192.168.1.27 http-get (hydra -L data/users.txt -P data/passwords.txt -o reports/hydra_scan_report_20250221_220841.txt 192.168.1.27 http-get)

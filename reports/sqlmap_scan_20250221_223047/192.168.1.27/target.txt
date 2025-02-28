@@ -1,1 +1,0 @@
-http://192.168.1.27 (GET)  # /usr/bin/sqlmap -u 192.168.1.27 --batch --output-dir=reports/sqlmap_scan_20250221_223047

@@ -1,1 +1,0 @@
-# Hydra v9.5 run at 2025-02-21 21:45:07 on 192.168.1.27 ssh (hydra -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt -o reports/hydra_scan_report_20250221_214505.txt 192.168.1.27 ssh)

@@ -1,0 +1,1 @@
+http://192.168.1.254/login?user=admin (GET)  # /usr/bin/sqlmap -u 192.168.1.254/login?user=admin --batch --risk=3 --level=5 --output-dir=reports/sqlmap_scan_20250228_195319
