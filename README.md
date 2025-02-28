@@ -16,6 +16,14 @@ L'outil possède une **interface en ligne de commande (CLI) interactive** pour u
 
 ## 📜 Installation
 
+### 🛠️ Cloner le projet
+
+Pour récupérer le projet depuis GitHub, exécutez la commande suivante :
+```bash
+ git clone https://github.com/Adam-Lernould/Network_Scanner.git
+ cd Network_Scanner
+```
+
 ### 🛠️ Prérequis
 Le script nécessite plusieurs outils de sécurité que vous pouvez installer à l'aide du fichier `requirements.txt`.
 
