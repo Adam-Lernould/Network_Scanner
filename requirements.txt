@@ -1,0 +1,7 @@
+nmap
+netdiscover
+nikto
+gobuster
+hydra
+sqlmap
+whatweb
