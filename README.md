@@ -1,6 +1,6 @@
 # 🔍 Network Scanner Toolkit
 
-## 📌 Description
+## Description
 Ce projet est un **outil de scan réseau** automatisé en **Bash**, regroupant plusieurs outils puissants comme :
 - **Netdiscover** : Découverte d'hôtes sur le réseau local.
 - **Nmap** : Scan de ports et détection de services.
@@ -14,9 +14,9 @@ L'outil possède une **interface en ligne de commande (CLI) interactive** pour u
 
 ---
 
-## 📜 Installation
+## Installation
 
-### 🛠️ Cloner le projet
+### Cloner le projet
 
 Pour récupérer le projet depuis GitHub, exécutez la commande suivante :
 ```bash
@@ -24,10 +24,10 @@ Pour récupérer le projet depuis GitHub, exécutez la commande suivante :
  cd Network_Scanner
 ```
 
-### 🛠️ Prérequis
+### Prérequis
 Le script nécessite plusieurs outils de sécurité que vous pouvez installer à l'aide du fichier `requirements.txt`.
 
-### 🔽 Installation automatique des dépendances
+### Installation automatique des dépendances
 Exécutez la commande suivante pour installer les outils nécessaires :
 ```bash
 sudo apt update && xargs -a requirements.txt sudo apt install -y
@@ -42,7 +42,7 @@ pip install sqlmap
 
 ---
 
-## 🚀 Utilisation
+## Utilisation
 
 Lancez le script principal `scan.sh` pour accéder à l'interface interactive :
 ```bash
@@ -50,7 +50,7 @@ Lancez le script principal `scan.sh` pour accéder à l'interface interactive :
 ```
 Vous verrez alors un menu permettant de choisir l'outil que vous souhaitez utiliser.
 
-### 📌 Exemple d'utilisation
+### Exemple d'utilisation
 ```plaintext
 Choisissez un outil de scan ou tapez 'exit' pour quitter :
 1. Netdiscover (Découverte d'hôtes sur le réseau local)
@@ -66,7 +66,7 @@ Sélectionnez une option et suivez les instructions pour exécuter le scan.
 
 ---
 
-## 📂 Arborescence du projet
+## Arborescence du projet
 ```
 .
 ├── scan.sh           # Script principal
@@ -83,25 +83,25 @@ Sélectionnez une option et suivez les instructions pour exécuter le scan.
 
 ---
 
-## 💡 Améliorations futures
+## Améliorations futures
 - Ajouter d'autres outils de reconnaissance.
 - Ajouter un mode "rapport complet" pour générer un fichier récapitulatif après chaque scan.
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 Cet outil est destiné à un usage **éthique et légal uniquement**. L'utilisation de ce scanner sans autorisation explicite du propriétaire du réseau est **strictement interdite**.
 
 ---
 
-## 🛠️ Contribuer
+## Contribuer
 Les contributions sont les bienvenues ! Forkez ce projet, améliorez-le et proposez vos modifications via une **Pull Request** ! 🚀
 
 ---
 
-## 📝 Licence
+## Licence
 Ce projet est sous licence **MIT**. Vous êtes libre de l'utiliser, de le modifier et de le distribuer tout en respectant les termes de la licence.
 
 ---
 
-🎯 **Auteur :** *[Adam Lernould / Adam-Lernould]*
+**Auteur :** *[Adam Lernould / Adam-Lernould]*
