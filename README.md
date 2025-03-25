@@ -1,4 +1,4 @@
-# 🔍 Network Scanner Toolkit
+# 🔍 Network Scanner Toolkit v1.0
 
 ## Description
 Ce projet est un **outil de scan réseau** automatisé en **Bash**, regroupant plusieurs outils puissants comme :
