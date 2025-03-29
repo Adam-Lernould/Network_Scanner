@@ -25,8 +25,10 @@ show_menu() {
     echo " 5. Hydra (Brute force sur les services réseau)"
     echo " 6. SQLmap (Détection d'injections SQL)"
     echo " 7. WhatWeb (Détection des technologies web)"
+    echo " 8. Tshark (Capture et analyse de paquets réseau)"
     echo "============================================================"
 }
+
 
 # Fonction pour afficher les options Nmap suggérées avec explications
 show_nmap_options() {
@@ -274,10 +276,19 @@ run_sqlmap() {
     ./sqlmap_scan.sh "$TARGET" "$PORT" "$RISK" "$LEVEL"
 }
 
+run_tshark() {
+    read -p "Entrez l'interface réseau (ex: eth0): " INTERFACE
+    read -p "Entrez le fichier de capture (ex: capture.pcap) ou appuyez sur Entrée pour utiliser le nom par défaut: " OUTPUT_FILE
+    OUTPUT_FILE=${OUTPUT_FILE:-"reports/tshark_capture_$(date +%Y%m%d_%H%M%S).pcap"}
+    echo "Démarrage de Tshark sur l'interface $INTERFACE avec fichier de capture $OUTPUT_FILE"
+    ./tshark_scan.sh "$INTERFACE" "$OUTPUT_FILE"
+}
+
+
 # Boucle principale
 while true; do
     show_menu
-    read -p "Choisissez une option (1-7) ou tapez 'exit' pour quitter: " CHOICE
+    read -p "Choisissez une option (1-8) ou tapez 'exit' pour quitter: " CHOICE
     case $CHOICE in
         1) run_netdiscover ;;
         2) run_nmap ;;
@@ -286,7 +297,9 @@ while true; do
         5) run_hydra ;;
         6) run_sqlmap ;;
         7) run_whatweb ;;
+        8) run_tshark ;;
         exit) echo "Au revoir!"; break ;;
         *) echo "Option invalide. Veuillez réessayer." ;;
     esac
 done
+
