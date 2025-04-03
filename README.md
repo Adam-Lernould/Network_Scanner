@@ -1,7 +1,3 @@
-Voici le nouveau `README.md` mis à jour pour la **version 1.1** de ton projet **Network Scanner Toolkit**, sans emojis comme demandé, et en respectant la structure précédente :
-
----
-
 # Network Scanner Toolkit v1.1
 
 ## Description
