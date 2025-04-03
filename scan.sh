@@ -26,9 +26,9 @@ show_menu() {
     echo " 6. SQLmap (Détection d'injections SQL)"
     echo " 7. WhatWeb (Détection des technologies web)"
     echo " 8. Tshark (Capture et analyse de paquets réseau)"
+    echo " 9. Hashcat (Craquage de mots de passe)"
     echo "============================================================"
 }
-
 
 # Fonction pour afficher les options Nmap suggérées avec explications
 show_nmap_options() {
@@ -171,6 +171,26 @@ run_nmap() {
     ./nmap_scan.sh "$TARGET" "$OPTIONS" "$SCRIPTS"
 }
 
+run_hashcat() {
+    echo "============================================================"
+    echo " Menu Hashcat : Craquage de mots de passe"
+    echo "============================================================"
+    echo " 1. Lancer un nouveau craquage"
+    echo "============================================================"
+    read -p "→ Choisissez l'option : " H_CHOICE
+
+    if [ "$H_CHOICE" != "1" ]; then
+        echo -e "\033[1;31m[!] Choix invalide. Retour au menu principal.\033[0m"
+    else
+        read -p "Entrez le fichier de hash (ex: hashes.txt): " HASH_FILE
+        read -p "Entrez le fichier de wordlist (ex: /path/to/wordlist.txt): " WORDLIST
+        echo "Démarrage de Hashcat sur $HASH_FILE avec wordlist $WORDLIST"
+        ./hashcat_crack.sh "$HASH_FILE" "$WORDLIST"
+    fi
+}
+
+
+
 run_whatweb() {
     read -p "Entrez la cible (ex: http://example.com): " TARGET
     echo "Démarrage de WhatWeb sur $TARGET"
@@ -206,15 +226,15 @@ run_hydra() {
     read -p "Entrez la cible (IP/URL): " TARGET
     echo "=========================="
     echo " Choisissez le service :"
-    echo " 1. http-get"
-    echo " 2. http-post-form"
+    echo " 1. http-get (utilise la méthode GET pour tester l'authentification)"
+    echo " 2. http-post-form (soumet un formulaire en POST pour tester l'authentification)"
     echo " 3. ftp"
     echo " 4. ssh"
     echo "=========================="
     read -p "Entrez le numéro du service (1-4): " SERVICE_CHOICE
     case $SERVICE_CHOICE in
         1) SERVICE="http-get" ;;
-        2) SERVICE="http-post-form" 
+        2) SERVICE="http-post-form"
            read -p "Entrez le chemin du formulaire (ex: /login): " FORM_PATH
            read -p "Entrez le message d'échec d'authentification (ex: Incorrect password): " FAILURE_MESSAGE
            SERVICE="$FORM_PATH:username=^USER^&password=^PASS^:F=$FAILURE_MESSAGE"
@@ -230,8 +250,9 @@ run_hydra() {
     echo "Démarrage de l'attaque Hydra sur $TARGET:$PORT ($SERVICE) avec utilisateurs: $USERLIST et mots de passe: $PASSLIST"
     ./hydra_scan.sh "$TARGET" "$SERVICE" "$USERLIST" "$PASSLIST"
 }
+
+
 # Fonction pour exécuter SQLmap
-# Fonction pour exécuter SQLmap avec choix du port
 run_sqlmap() {
     read -p "Entrez l'IP/URL de base (ex: http://192.168.1.27): " BASE_URL
     read -p "Entrez le port (défaut: 80): " PORT
@@ -284,11 +305,10 @@ run_tshark() {
     ./tshark_scan.sh "$INTERFACE" "$OUTPUT_FILE"
 }
 
-
 # Boucle principale
 while true; do
     show_menu
-    read -p "Choisissez une option (1-8) ou tapez 'exit' pour quitter: " CHOICE
+    read -p "Choisissez une option (1-10) ou tapez 'exit' pour quitter: " CHOICE
     case $CHOICE in
         1) run_netdiscover ;;
         2) run_nmap ;;
@@ -298,8 +318,8 @@ while true; do
         6) run_sqlmap ;;
         7) run_whatweb ;;
         8) run_tshark ;;
+        9) run_hashcat ;;
         exit) echo "Au revoir!"; break ;;
         *) echo "Option invalide. Veuillez réessayer." ;;
     esac
 done
-

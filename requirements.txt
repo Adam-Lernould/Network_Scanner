@@ -5,3 +5,6 @@ gobuster
 hydra
 sqlmap
 whatweb
+tshark
+hashcat
+
